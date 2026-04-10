@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nagesh Bachanagoni | Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Nagesh Bachanagoni, a Data Analyst and BI Developer specializing in Power BI, SQL Server, ETL workflows, data quality, and analytics reporting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: rgba(15, 23, 42, 0.82);
+      --panel-2: rgba(30, 41, 59, 0.65);
+      --text: #e5eefb;
+      --muted: #a7b3c9;
+      --line: rgba(255,255,255,0.09);
+      --accent: #60a5fa;
+      --accent-2: #22c55e;
+      --max: 1120px;
+      --radius: 24px;
+      --shadow: 0 24px 60px rgba(0,0,0,0.30);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(96,165,250,0.18), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(34,197,94,0.10), transparent 28%),
+        linear-gradient(180deg, #09101d 0%, #0b1020 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; }
+    .section { padding: 5rem 0; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: 1rem;
+      font-size: .88rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .eyebrow::before {
+      content: "";
+      width: 1.6rem;
+      height: 1px;
+      background: currentColor;
+    }
+    .section-title {
+      margin: 0 0 .8rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+    .section-copy {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(9,16,29,0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+    .brand-badge {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      box-shadow: var(--shadow);
+      color: #fff;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--text); }
+
+    .menu-btn {
+      display: none;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--text);
+      border-radius: 14px;
+      padding: .75rem .9rem;
+      cursor: pointer;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero { padding: 4.5rem 0 3rem; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 1.6rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 760px) {
+      .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .profile-panel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+      }
+      .profile-meta {
+        padding-top: 0;
+      }
+    }
+    .hero-copy { padding: 2rem; }
+    .hero h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: .96;
+      letter-spacing: -.07em;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      margin: 0 0 1.5rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 60ch;
+    }
+    .hero-actions,
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .9rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      min-height: 48px;
+      padding: .85rem 1.15rem;
+      border-radius: 16px;
+      font-weight: 700;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+      border: 1px solid transparent;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: #fff;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #8b5cf6);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,.03);
+      border-color: var(--line);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .stat {
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .stat strong {
+      display: block;
+      margin-bottom: .15rem;
+      font-size: 1.4rem;
+    }
+    .stat span { color: var(--muted); font-size: .95rem; }
+
+    .profile-panel { padding: 1.3rem; }
+    .profile-photo {
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.08);
+      aspect-ratio: 1 / 1.05;
+      background: linear-gradient(135deg, rgba(96,165,250,.18), rgba(139,92,246,.18));
+    }
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .profile-meta { padding-top: 1rem; }
+    .profile-meta h2 { margin: 0 0 .2rem; font-size: 1.35rem; }
+    .profile-meta p { margin: 0 0 1rem; color: var(--muted); word-break: break-word; }
+
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .panel { padding: 1.5rem; }
+    .panel h3 { margin-top: 0; margin-bottom: .8rem; font-size: 1.15rem; }
+    .panel p { margin: 0; color: var(--muted); }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1rem;
+    }
+    .tag {
+      padding: .65rem .9rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: .92rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+      margin-top: 2rem;
+    }
+    .project-image-link {
+      display: block;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(135deg, rgba(96,165,250,.12), rgba(139,92,246,.12));
+    }
+    .project-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      transition: transform .3s ease, filter .3s ease;
+    }
+    .project-image-link:hover .project-image {
+      transform: scale(1.03);
+      filter: brightness(0.9);
+    }
+    .project-image-link:hover .project-image {
+      transform: scale(1.03);
+    }
+    .project {
+      overflow: hidden;
+    }
+    .project-top {
+      padding: 1.4rem 1.4rem 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .project h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .project .year {
+      color: var(--accent);
+      font-size: .9rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .project-body {
+      padding: .8rem 1.4rem 1.4rem;
+    }
+    .project-body p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+    .contact-item small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: .2rem;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+    }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 1.4rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-btn { display: inline-flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 1rem;
+        right: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 18px;
+        background: rgba(9,16,29,.97);
+        border: 1px solid var(--line);
+      }
+      .nav-links.open { display: flex; }
+      .hero { padding-top: 2.5rem; }
+      .section { padding: 4rem 0; }
+      .hero-copy, .profile-panel, .panel, .project-top, .project-body { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .hero-copy, .profile-panel, .panel { padding-top: 1.2rem; padding-bottom: 1.2rem; }
+      .hero h1 { font-size: clamp(2rem, 10vw, 3rem); }
+      .hero-actions, .social-links { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
+      .profile-photo { aspect-ratio: 1 / 1; }
+      .contact-item { align-items: flex-start; flex-direction: column; }
+      .contact-item span { display: none; }
+      .footer-row { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Portfolio Home">
+        <span class="brand-badge">NB</span>
+        <span>Nagesh Bachanagoni</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="card hero-copy reveal">
+          <div class="eyebrow">Portfolio</div>
+          <h1>Hi, I’m <span>Nagesh Bachanagoni</span><br />Data Analyst & BI Developer</h1>
+          <p>
+            Data Analyst and BI Developer with 2+ years of experience designing enterprise dashboards, engineering ETL pipelines,
+            and delivering data-driven insights using Power BI, T-SQL, SQL Server, and Power Automate.
+            I specialize in data profiling, validation, anomaly detection, and root-cause analysis for business reporting systems.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>2+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="stat">
+              <strong>3</strong>
+              <span>Key Projects</span>
+            </div>
+            <div class="stat">
+              <strong>PL-300</strong>
+              <span>Power BI Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card profile-panel reveal">
+          <div class="profile-photo">
+            <img src="./assets/profile.jpg" alt="Portrait of Nagesh Bachanagoni" />
+          </div>
+          <div class="profile-meta">
+            <h2>Nagesh Bachanagoni</h2>
+            <p>Data Analyst & BI Developer · Montgomery, Alabama</p>
+            <div class="social-links">
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/nagesh-bachanagoni/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="eyebrow">About</div>
+        <h2 class="section-title reveal">Analytics, BI, and data quality work with measurable business impact.</h2>
+        <p class="section-copy reveal">
+          I am currently pursuing an M.S. in Computer Science at Auburn University at Montgomery with a 3.5 GPA,
+          while building toward Data Quality Analyst and BI Analyst roles. My experience includes dashboard design,
+          ETL workflow development, SQL performance tuning, and structured data validation for enterprise reporting.
+        </p>
+
+        <div class="about-grid">
+          <div class="card panel reveal">
+            <h3>What I do</h3>
+            <p>
+              I build reporting solutions that connect business data to decisions. My work includes developing Power BI dashboards,
+              writing advanced T-SQL queries and stored procedures, creating ETL processes, and improving data quality through validation,
+              anomaly detection, and root-cause analysis.
+            </p>
+          </div>
+          <div class="card panel reveal">
+            <h3>Core skills</h3>
+            <div class="tag-list">
+              <span class="tag">Power BI</span>
+              <span class="tag">DAX</span>
+              <span class="tag">T-SQL</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">Power Automate</span>
+              <span class="tag">Power Apps</span>
+              <span class="tag">Azure SQL</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">Python</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Dataverse</span>
+              <span class="tag">SharePoint</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="eyebrow">Projects</div>
+        <h2 class="section-title reveal">Selected work from my professional experience</h2>
+        <p class="section-copy reveal">
+          These project summaries are written directly from my resume and reflect the analytics, reporting, and data quality solutions I worked on professionally.
+        </p>
+
+        <div class="projects-grid">
+          <article class="card project reveal">
+            <a class="project-image-link" href="https://github.com/bachanagoninagesh/Fleet-Management-BI-Report" target="_blank" rel="noreferrer">
+              <img class="project-image" src="./assets/project1.png" alt="Fleet Management Dashboard preview" />
+            </a>
+            <div class="project-top">
+              <h3>Fleet Management Dashboard</h3>
+              <span class="year">2021–2023</span>
+            </div>
+            <div class="project-body">
+              <p>
+                Built Power BI reports integrating SQL Server, Excel, and SharePoint to monitor fleet KPIs. The solution improved workshop efficiency by 30%
+                and reduced vehicle downtime by 25% through reporting visibility, profiling checks, and performance-tuned T-SQL extraction logic.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Power BI</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">T-SQL</span>
+                <span class="tag">SharePoint</span>
+              </div>
+              <div class="hero-actions" style="margin-top: 1rem;">
+                <a class="btn btn-secondary" href="https://drive.google.com/file/d/11GpVjfZysm_ZPhs31gWY9yB1elzZkulZ/view" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh/Fleet-Management-BI-Report" target="_blank" rel="noreferrer">View Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <a class="project-image-link" href="https://github.com/bachanagoninagesh/Sales-Analysis-Report" target="_blank" rel="noreferrer">
+              <img class="project-image" src="./assets/project2.png" alt="Sales Analysis Report preview" />
+            </a>
+            <div class="project-top">
+              <h3>Sales Analysis Report</h3>
+              <span class="year">2021–2023</span>
+            </div>
+            <div class="project-body">
+              <p>
+                Developed Power BI dashboards with complex DAX measures for sales forecasting, trend analysis, KPI tracking, and pricing insight.
+                The reports supported discount strategy decisions and contributed to a 20% increase in annual sales by surfacing actionable business insights.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Power BI</span>
+                <span class="tag">DAX</span>
+                <span class="tag">Analytics</span>
+                <span class="tag">T-SQL</span>
+              </div>
+              <div class="hero-actions" style="margin-top: 1rem;">
+                <a class="btn btn-secondary" href="https://drive.google.com/file/d/1MqJ8B7TKjl9G3kMjqcaPej8diMBRzN6I/view" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh/Sales-Analysis-Report" target="_blank" rel="noreferrer">View Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <a class="project-image-link" href="https://github.com/bachanagoninagesh" target="_blank" rel="noreferrer">
+              <img class="project-image" src="./assets/project3.png" alt="Customer Master Management System preview" />
+            </a>
+            <div class="project-top">
+              <h3>Customer Master Management System</h3>
+              <span class="year">2021–2023</span>
+            </div>
+            <div class="project-body">
+              <p>
+                Designed and deployed a Canvas App using Power Apps with a Dataverse backend and Power Automate multi-stage approval workflows.
+                The solution streamlined customer information requests and strengthened data integrity across UAT, SIT, and Production environments.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Power Apps</span>
+                <span class="tag">Dataverse</span>
+                <span class="tag">Power Automate</span>
+                <span class="tag">Data Governance</span>
+              </div>
+              <div class="hero-actions" style="margin-top: 1rem;">
+                <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh" target="_blank" rel="noreferrer">View Project</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="eyebrow">Contact</div>
+        <h2 class="section-title reveal">Open to BI, analytics, and data quality opportunities.</h2>
+        <p class="section-copy reveal">
+          I am actively targeting Data Analyst, BI Analyst, and Data Quality Analyst roles where I can contribute through enterprise reporting,
+          ETL development, and high-quality data solutions.
+        </p>
+
+        <div class="contact-grid">
+          <div class="card panel reveal">
+            <h3>Get in touch</h3>
+            <div class="contact-list">
+              <a class="contact-item" href="mailto:nageshbachanagoni@gmail.com">
+                <div>
+                  <small>Email</small>
+                  <strong>nageshbachanagoni@gmail.com</strong>
+                </div>
+                <span>↗</span>
+              </a>
+              <div class="contact-item">
+                <div>
+                  <small>Phone</small>
+                  <strong>(334) 895-7949</strong>
+                </div>
+                <span>•</span>
+              </div>
+              <a class="contact-item" href="https://www.linkedin.com/in/nagesh-bachanagoni/" target="_blank" rel="noreferrer">
+                <div>
+                  <small>LinkedIn</small>
+                  <strong>linkedin.com/in/nagesh-bachanagoni</strong>
+                </div>
+                <span>↗</span>
+              </a>
+              <a class="contact-item" href="https://github.com/bachanagoninagesh" target="_blank" rel="noreferrer">
+                <div>
+                  <small>GitHub</small>
+                  <strong>github.com/bachanagoninagesh</strong>
+                </div>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="card panel reveal">
+            <h3>Education & certifications</h3>
+            <p>
+              M.S. Computer Science, Auburn University at Montgomery (GPA 3.5), Jan 2024 – Dec 2025.<br /><br />
+              Certifications include Azure Fundamentals (AZ-900), Power BI Data Analyst Associate (PL-300),
+              Power Platform Fundamentals (PL-900), Power Platform App Maker (PL-100), SAS Programming, and Shopify Essential Training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Nagesh Bachanagoni</span>
+      <span>Built for analytics, BI, and data-focused roles.</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const sections = document.querySelectorAll('section[id]');
+    const links = document.querySelectorAll('.nav-links a');
+
+    menuBtn?.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) current = section.getAttribute('id');
+      });
+      links.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
