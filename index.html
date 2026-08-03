@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nagesh Bachanagoni | Data Analyst Portfolio</title>
-  <meta name="description" content="Portfolio of Nagesh Bachanagoni, a Data Analyst and BI Developer specializing in Power BI, SQL Server, ETL workflows, data quality, and analytics reporting." />
+  <meta name="description" content="Portfolio of Nagesh Bachanagoni, a Data Analyst and BI Developer specializing in Power BI, SQL Server, ETL workflows, data quality, analytics reporting, and data engineering with Kafka and Spark." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -291,6 +291,18 @@
     .project-image-link:hover .project-image {
       transform: scale(1.03);
     }
+    .project-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: .95rem;
+    }
     .project {
       overflow: hidden;
     }
@@ -430,9 +442,11 @@
           <div class="eyebrow">Portfolio</div>
           <h1>Hi, I’m <span>Nagesh Bachanagoni</span><br />Data Analyst & BI Developer</h1>
           <p>
-            Data Analyst and BI Developer with 2+ years of experience designing enterprise dashboards, engineering ETL pipelines,
-            and delivering data-driven insights using Power BI, T-SQL, SQL Server, and Power Automate.
-            I specialize in data profiling, validation, anomaly detection, and root-cause analysis for business reporting systems.
+            Data Analyst and BI Developer with 3+ years of experience turning complex datasets into clear, actionable insights
+            for government, e-commerce, and enterprise organizations. Skilled in building enterprise-grade Power BI dashboards,
+            automating workflows with Power Automate and Power Apps, and writing performance-tuned T-SQL and SQL Server queries
+            — with measurable impact including a 20% increase in annual sales and a 30% improvement in operational efficiency.
+            Also brings hands-on data engineering experience with Kafka, Spark Structured Streaming, PostgreSQL, and Docker.
           </p>
 
           <div class="hero-actions">
@@ -442,11 +456,11 @@
 
           <div class="stats">
             <div class="stat">
-              <strong>2+</strong>
+              <strong>3+</strong>
               <span>Years Experience</span>
             </div>
             <div class="stat">
-              <strong>3</strong>
+              <strong>6</strong>
               <span>Key Projects</span>
             </div>
             <div class="stat">
@@ -477,18 +491,20 @@
         <div class="eyebrow">About</div>
         <h2 class="section-title reveal">Analytics, BI, and data quality work with measurable business impact.</h2>
         <p class="section-copy reveal">
-          I am currently pursuing an M.S. in Computer Science at Auburn University at Montgomery with a 3.5 GPA,
-          while building toward Data Quality Analyst and BI Analyst roles. My experience includes dashboard design,
-          ETL workflow development, SQL performance tuning, and structured data validation for enterprise reporting.
+          I hold an M.S. in Computer Science from Auburn University at Montgomery (GPA 3.5) and I'm targeting
+          Data Analyst, BI Analyst, and Data Quality Analyst roles. My experience spans enterprise dashboard design,
+          ETL/ELT pipeline development, SQL performance tuning, and hands-on data engineering with streaming systems
+          like Kafka and Spark.
         </p>
 
         <div class="about-grid">
           <div class="card panel reveal">
             <h3>What I do</h3>
             <p>
-              I build reporting solutions that connect business data to decisions. My work includes developing Power BI dashboards,
-              writing advanced T-SQL queries and stored procedures, creating ETL processes, and improving data quality through validation,
-              anomaly detection, and root-cause analysis.
+              I build reporting and data solutions that connect business data to decisions. My work includes developing Power BI
+              dashboards, writing advanced T-SQL queries and stored procedures, creating ETL/ELT processes, improving data quality
+              through validation, anomaly detection, and root-cause analysis, and building streaming data pipelines with Kafka
+              and Spark Structured Streaming.
             </p>
           </div>
           <div class="card panel reveal">
@@ -504,6 +520,12 @@
               <span class="tag">Tableau</span>
               <span class="tag">Python</span>
               <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Kafka</span>
+              <span class="tag">Spark Structured Streaming</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Flask</span>
+              <span class="tag">OpenAI GPT API</span>
               <span class="tag">Dataverse</span>
               <span class="tag">SharePoint</span>
             </div>
@@ -517,7 +539,8 @@
         <div class="eyebrow">Projects</div>
         <h2 class="section-title reveal">Selected work from my professional experience</h2>
         <p class="section-copy reveal">
-          These project summaries are written directly from my resume and reflect the analytics, reporting, and data quality solutions I worked on professionally.
+          These project summaries are written directly from my resume and reflect both the analytics, reporting, and data quality solutions
+          I worked on professionally, and the data engineering and AI projects I've built independently.
         </p>
 
         <div class="projects-grid">
@@ -598,6 +621,86 @@
               </div>
             </div>
           </article>
+
+          <article class="card project reveal">
+            <a class="project-image-link" href="https://github.com/bachanagoninagesh/Data_Pipeline" target="_blank" rel="noreferrer">
+              <div class="project-placeholder">Screenshot coming soon</div>
+            </a>
+            <div class="project-top">
+              <h3>Real-Time Logistics & Inventory Monitoring System</h3>
+              <span class="year">M.S. Capstone · 2025</span>
+            </div>
+            <div class="project-body">
+              <p>
+                Architected a streaming pipeline — Kafka producers → Spark Structured Streaming → PostgreSQL fact tables →
+                Power BI DirectQuery dashboards — replicating production-grade logistics monitoring. Containerized the full stack
+                with Docker Compose, replicating a production-grade distributed architecture with fault-tolerant checkpointing.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Kafka</span>
+                <span class="tag">Spark</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="hero-actions" style="margin-top: 1rem;">
+                <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh/Data_Pipeline" target="_blank" rel="noreferrer">View Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <a class="project-image-link" href="https://github.com/bachanagoninagesh/JobMatchAI" target="_blank" rel="noreferrer">
+              <img class="project-image" src="./assets/jobmatchai.png" alt="JobMatchAI pipeline architecture preview" />
+            </a>
+            <div class="project-top">
+              <h3>JobMatchAI</h3>
+              <span class="year">Personal Project</span>
+            </div>
+            <div class="project-body">
+              <p>
+                Built an AI job search platform aggregating listings from 15 job board APIs, using GPT to score matches,
+                tailor resumes, and generate cover letters. Designed a multi-user architecture deployed on Render,
+                delivering ready-to-apply PDF resume and cover letter packages via email daily.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">OpenAI GPT API</span>
+                <span class="tag">Render</span>
+              </div>
+              <div class="hero-actions" style="margin-top: 1rem;">
+                <a class="btn btn-secondary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh/JobMatchAI" target="_blank" rel="noreferrer">View Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <a class="project-image-link" href="https://github.com/bachanagoninagesh/Stock-Analyzer-AI-Agent" target="_blank" rel="noreferrer">
+              <img class="project-image" src="./assets/stock-analyzer.png" alt="Stock Analyzer Pro dashboard preview" />
+            </a>
+            <div class="project-top">
+              <h3>Stock Analyzer Pro</h3>
+              <span class="year">Personal Project</span>
+            </div>
+            <div class="project-body">
+              <p>
+                Built a stock analysis platform aggregating live prices, fundamentals, news, and sentiment data, merged into a
+                Buy/Sell/Hold signal via 29 analysis modules. Built an ensemble forecasting engine blending 8 AI/statistical
+                models, delivered through an 18-tab dashboard with backtesting and portfolio optimization.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Ensemble Forecasting</span>
+              </div>
+              <div class="hero-actions" style="margin-top: 1rem;">
+                <a class="btn btn-secondary" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh/Stock-Analyzer-AI-Agent" target="_blank" rel="noreferrer">View Project</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -649,7 +752,8 @@
           <div class="card panel reveal">
             <h3>Education & certifications</h3>
             <p>
-              M.S. Computer Science, Auburn University at Montgomery (GPA 3.5), Jan 2024 – Dec 2025.<br /><br />
+              M.S. Computer Science, Auburn University at Montgomery (GPA 3.5), Jan 2024 – Dec 2025.<br />
+              B.S. Computer Science, JNTUH University, Hyderabad, India (GPA 7.5/10), Aug 2017 – Sep 2021.<br /><br />
               Certifications include Azure Fundamentals (AZ-900), Power BI Data Analyst Associate (PL-300),
               Power Platform Fundamentals (PL-900), Power Platform App Maker (PL-100), SAS Programming, and Shopify Essential Training.
             </p>
