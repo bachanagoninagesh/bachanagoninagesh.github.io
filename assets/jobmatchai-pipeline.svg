@@ -1,0 +1,112 @@
+<svg viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', Consolas, monospace">
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#39d3bb" />
+    </marker>
+  </defs>
+
+  <rect width="1200" height="750" fill="#0d1117" />
+
+  <!-- title bar -->
+  <rect x="0" y="0" width="1200" height="50" fill="#161b22" />
+  <circle cx="26" cy="25" r="7" fill="#ff5f56" />
+  <circle cx="48" cy="25" r="7" fill="#ffbd2e" />
+  <circle cx="70" cy="25" r="7" fill="#27c93f" />
+  <text x="600" y="30" fill="#8b949e" font-size="14" letter-spacing="3" text-anchor="middle">JOBMATCHAI · PIPELINE ARCHITECTURE</text>
+
+  <!-- Row 1: 6 pipeline stages -->
+  <!-- Box 1 -->
+  <rect x="37" y="95" width="175" height="170" rx="10" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5" />
+  <text x="124" y="126" fill="#58a6ff" font-size="12" letter-spacing="1" text-anchor="middle">USER INPUT</text>
+  <text x="124" y="155" fill="#e6edf3" font-size="15" font-weight="bold" text-anchor="middle">Resume</text>
+  <text x="124" y="178" fill="#8b949e" font-size="10.5" text-anchor="middle">PDF · DOCX · TXT</text>
+
+  <!-- Box 2 -->
+  <rect x="227" y="95" width="175" height="170" rx="10" fill="#0d1117" stroke="#39d3bb" stroke-width="1.5" />
+  <text x="314" y="126" fill="#39d3bb" font-size="12" letter-spacing="1" text-anchor="middle">JOB FETCHING</text>
+  <text x="314" y="152" fill="#e6edf3" font-size="15" font-weight="bold" text-anchor="middle">15 Sources</text>
+  <text x="314" y="174" fill="#8b949e" font-size="10.5" text-anchor="middle">ThreadPoolExecutor</text>
+  <text x="314" y="192" fill="#8b949e" font-size="10.5" text-anchor="middle">parallel fetch</text>
+
+  <!-- Box 3 -->
+  <rect x="417" y="95" width="175" height="170" rx="10" fill="#0d1117" stroke="#f0883e" stroke-width="1.5" />
+  <text x="504" y="126" fill="#f0883e" font-size="12" letter-spacing="1" text-anchor="middle">DEDUP CACHE</text>
+  <text x="504" y="150" fill="#e6edf3" font-size="14" font-weight="bold" text-anchor="middle">New Jobs Only</text>
+  <text x="504" y="174" fill="#8b949e" font-size="10.5" text-anchor="middle">seen_jobs.json</text>
+  <text x="504" y="192" fill="#8b949e" font-size="10.5" text-anchor="middle">per user</text>
+
+  <!-- Box 4 -->
+  <rect x="607" y="95" width="175" height="170" rx="10" fill="#0d1117" stroke="#bc8cff" stroke-width="1.5" />
+  <text x="694" y="126" fill="#bc8cff" font-size="12" letter-spacing="1" text-anchor="middle">AI SCORING</text>
+  <text x="694" y="150" fill="#e6edf3" font-size="14" font-weight="bold" text-anchor="middle">GPT · 24 threads</text>
+  <text x="694" y="174" fill="#8b949e" font-size="10.5" text-anchor="middle">match threshold</text>
+  <text x="694" y="192" fill="#8b949e" font-size="10.5" text-anchor="middle">filter</text>
+
+  <!-- Box 5 -->
+  <rect x="797" y="95" width="175" height="170" rx="10" fill="#0d1117" stroke="#ff7b72" stroke-width="1.5" />
+  <text x="884" y="126" fill="#ff7b72" font-size="12" letter-spacing="1" text-anchor="middle">AI TAILORING</text>
+  <text x="884" y="150" fill="#e6edf3" font-size="14" font-weight="bold" text-anchor="middle">Resume · ATS</text>
+  <text x="884" y="170" fill="#e6edf3" font-size="14" font-weight="bold" text-anchor="middle">Cover Letter</text>
+  <text x="884" y="192" fill="#8b949e" font-size="10.5" text-anchor="middle">parallel per job</text>
+
+  <!-- Box 6 -->
+  <rect x="987" y="95" width="176" height="170" rx="10" fill="#0d1117" stroke="#3fb950" stroke-width="1.5" />
+  <text x="1075" y="126" fill="#3fb950" font-size="12" letter-spacing="1" text-anchor="middle">DELIVERY</text>
+  <text x="1075" y="152" fill="#e6edf3" font-size="14" font-weight="bold" text-anchor="middle">Email + PDFs</text>
+  <text x="1075" y="176" fill="#8b949e" font-size="10.5" text-anchor="middle">Resend API</text>
+  <text x="1075" y="192" fill="#8b949e" font-size="10.5" text-anchor="middle">HTTPS</text>
+
+  <!-- Arrows -->
+  <line x1="215" y1="178" x2="224" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow2)" />
+  <line x1="405" y1="178" x2="414" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow2)" />
+  <line x1="595" y1="178" x2="604" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow2)" />
+  <line x1="785" y1="178" x2="794" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow2)" />
+  <line x1="975" y1="178" x2="984" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow2)" />
+
+  <!-- Divider -->
+  <line x1="50" y1="292" x2="1150" y2="292" stroke="#21262d" stroke-width="1" />
+  <text x="600" y="322" fill="#8b949e" font-size="14" letter-spacing="3" text-anchor="middle">MULTI-USER ARCHITECTURE</text>
+
+  <!-- User A panel -->
+  <rect x="50" y="350" width="520" height="170" rx="12" fill="#0f1720" stroke="#21262d" stroke-width="1.5" />
+  <circle cx="76" cy="378" r="6" fill="#58a6ff" />
+  <text x="92" y="383" fill="#e6edf3" font-size="14" font-weight="bold">User A · alice@gmail.com</text>
+  <text x="76" y="412" fill="#8b949e" font-size="12">user_data/alice_gmail_com/</text>
+  <text x="76" y="432" fill="#6e7681" font-size="12">├─ resume.txt</text>
+  <text x="76" y="450" fill="#6e7681" font-size="12">├─ seen_jobs.json</text>
+  <text x="76" y="468" fill="#6e7681" font-size="12">└─ output/ (30 PDFs)</text>
+  <text x="76" y="498" fill="#39d3bb" font-size="11.5">run_id: a1b2c3… → /api/status?run_id=a1b2…</text>
+
+  <!-- User B panel -->
+  <rect x="630" y="350" width="520" height="170" rx="12" fill="#0f1720" stroke="#21262d" stroke-width="1.5" />
+  <circle cx="656" cy="378" r="6" fill="#3fb950" />
+  <text x="672" y="383" fill="#e6edf3" font-size="14" font-weight="bold">User B · bob@gmail.com</text>
+  <text x="656" y="412" fill="#8b949e" font-size="12">user_data/bob_gmail_com/</text>
+  <text x="656" y="432" fill="#6e7681" font-size="12">├─ resume.txt</text>
+  <text x="656" y="450" fill="#6e7681" font-size="12">├─ seen_jobs.json</text>
+  <text x="656" y="468" fill="#6e7681" font-size="12">└─ output/ (22 PDFs)</text>
+  <text x="656" y="498" fill="#39d3bb" font-size="11.5">run_id: f9e8d7… → /api/status?run_id=f9e8…</text>
+
+  <!-- center label -->
+  <text x="600" y="425" fill="#6e7681" font-size="11" text-anchor="middle">simultaneous</text>
+  <text x="600" y="440" fill="#6e7681" font-size="11" text-anchor="middle">isolated</text>
+  <text x="600" y="455" fill="#6e7681" font-size="11" text-anchor="middle">runs</text>
+
+  <!-- Divider -->
+  <line x1="50" y1="548" x2="1150" y2="548" stroke="#21262d" stroke-width="1" />
+
+  <!-- Tech badges -->
+  <text x="600" y="585" fill="#8b949e" font-size="13.5" text-anchor="middle">
+    <tspan fill="#58a6ff">●</tspan> Flask + Gunicorn &#160;&#160;
+    <tspan fill="#39d3bb">●</tspan> 15 Job Board APIs &#160;&#160;
+    <tspan fill="#f0883e">●</tspan> OpenAI GPT &#160;&#160;
+    <tspan fill="#bc8cff">●</tspan> ReportLab PDFs &#160;&#160;
+    <tspan fill="#3fb950">●</tspan> Resend API
+  </text>
+
+  <!-- Divider -->
+  <line x1="50" y1="618" x2="1150" y2="618" stroke="#21262d" stroke-width="1" />
+
+  <text x="600" y="655" fill="#6e7681" font-size="12.5" letter-spacing="1" text-anchor="middle">DEPLOYED ON RENDER · MULTI-USER · IPv4-FORCE PATCH FOR CLOUD COMPATIBILITY</text>
+  <text x="600" y="686" fill="#58a6ff" font-size="15" text-anchor="middle">github.com/bachanagoninagesh/JobMatchAI</text>
+</svg>

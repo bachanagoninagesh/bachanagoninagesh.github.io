@@ -1,0 +1,106 @@
+<svg viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', Consolas, monospace">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#39d3bb" />
+    </marker>
+  </defs>
+
+  <rect width="1200" height="750" fill="#0d1117" />
+
+  <!-- title bar -->
+  <rect x="0" y="0" width="1200" height="50" fill="#161b22" />
+  <circle cx="26" cy="25" r="7" fill="#ff5f56" />
+  <circle cx="48" cy="25" r="7" fill="#ffbd2e" />
+  <circle cx="70" cy="25" r="7" fill="#27c93f" />
+  <text x="600" y="30" fill="#8b949e" font-size="15" letter-spacing="3" text-anchor="middle">DATA_PIPELINE · REAL-TIME LOGISTICS ARCHITECTURE</text>
+
+  <!-- Row 1: pipeline stages -->
+  <rect x="50" y="95" width="200" height="170" rx="10" fill="#0d1117" stroke="#58a6ff" stroke-width="1.5" />
+  <text x="150" y="130" fill="#58a6ff" font-size="14" letter-spacing="1" text-anchor="middle">KAFKA PRODUCERS</text>
+  <text x="150" y="162" fill="#e6edf3" font-size="18" font-weight="bold" text-anchor="middle">Python</text>
+  <text x="150" y="190" fill="#8b949e" font-size="12" text-anchor="middle">GPS · Inventory</text>
+  <text x="150" y="208" fill="#8b949e" font-size="12" text-anchor="middle">Warehouse</text>
+  <rect x="70" y="222" width="160" height="22" rx="4" fill="#0f1720" stroke="#21262d" />
+  <text x="150" y="237" fill="#6e7681" font-size="11" text-anchor="middle">3 producer scripts</text>
+
+  <rect x="275" y="95" width="200" height="170" rx="10" fill="#0d1117" stroke="#39d3bb" stroke-width="1.5" />
+  <text x="375" y="130" fill="#39d3bb" font-size="14" letter-spacing="1" text-anchor="middle">KAFKA TOPICS</text>
+  <text x="375" y="162" fill="#e6edf3" font-size="18" font-weight="bold" text-anchor="middle">2 Topics</text>
+  <text x="375" y="190" fill="#8b949e" font-size="12" text-anchor="middle">inventory_events</text>
+  <text x="375" y="208" fill="#8b949e" font-size="12" text-anchor="middle">driver_gps_events</text>
+  <rect x="295" y="222" width="160" height="22" rx="4" fill="#0f1720" stroke="#21262d" />
+  <text x="375" y="237" fill="#6e7681" font-size="11" text-anchor="middle">durable event log</text>
+
+  <rect x="500" y="95" width="200" height="170" rx="10" fill="#0d1117" stroke="#f0883e" stroke-width="1.5" />
+  <text x="600" y="130" fill="#f0883e" font-size="14" letter-spacing="1" text-anchor="middle">SPARK STREAMING</text>
+  <text x="600" y="160" fill="#e6edf3" font-size="18" font-weight="bold" text-anchor="middle">Structured</text>
+  <text x="600" y="182" fill="#e6edf3" font-size="18" font-weight="bold" text-anchor="middle">Streaming</text>
+  <text x="600" y="206" fill="#8b949e" font-size="12" text-anchor="middle">transform · aggregate</text>
+  <rect x="520" y="222" width="160" height="22" rx="4" fill="#0f1720" stroke="#21262d" />
+  <text x="600" y="237" fill="#6e7681" font-size="11" text-anchor="middle">checkpointed micro-batches</text>
+
+  <rect x="725" y="95" width="200" height="170" rx="10" fill="#0d1117" stroke="#bc8cff" stroke-width="1.5" />
+  <text x="825" y="130" fill="#bc8cff" font-size="14" letter-spacing="1" text-anchor="middle">POSTGRESQL</text>
+  <text x="825" y="162" fill="#e6edf3" font-size="18" font-weight="bold" text-anchor="middle">Fact Tables</text>
+  <text x="825" y="190" fill="#8b949e" font-size="12" text-anchor="middle">analytics-optimized</text>
+  <text x="825" y="208" fill="#8b949e" font-size="12" text-anchor="middle">schema</text>
+  <rect x="745" y="222" width="160" height="22" rx="4" fill="#0f1720" stroke="#21262d" />
+  <text x="825" y="237" fill="#6e7681" font-size="11" text-anchor="middle">persistent volume</text>
+
+  <rect x="950" y="95" width="200" height="170" rx="10" fill="#0d1117" stroke="#3fb950" stroke-width="1.5" />
+  <text x="1050" y="130" fill="#3fb950" font-size="14" letter-spacing="1" text-anchor="middle">POWER BI</text>
+  <text x="1050" y="162" fill="#e6edf3" font-size="18" font-weight="bold" text-anchor="middle">DirectQuery</text>
+  <text x="1050" y="190" fill="#8b949e" font-size="12" text-anchor="middle">Live Dashboards</text>
+  <rect x="970" y="222" width="160" height="22" rx="4" fill="#0f1720" stroke="#21262d" />
+  <text x="1050" y="237" fill="#6e7681" font-size="11" text-anchor="middle">real-time visibility</text>
+
+  <!-- Arrows -->
+  <line x1="253" y1="178" x2="272" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="478" y1="178" x2="497" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="703" y1="178" x2="722" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="928" y1="178" x2="947" y2="178" stroke="#39d3bb" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Divider -->
+  <line x1="50" y1="292" x2="1150" y2="292" stroke="#21262d" stroke-width="1" />
+  <text x="600" y="322" fill="#8b949e" font-size="14" letter-spacing="3" text-anchor="middle">CONTAINERIZED DEPLOYMENT · DOCKER COMPOSE</text>
+
+  <!-- Docker compose box -->
+  <rect x="50" y="348" width="1100" height="175" rx="12" fill="#0f1720" stroke="#21262d" stroke-width="1.5" />
+  <text x="80" y="382" fill="#e6edf3" font-size="14" font-weight="bold" letter-spacing="1">DOCKER COMPOSE</text>
+
+  <rect x="110" y="405" width="230" height="70" rx="8" fill="#0d1117" stroke="#58a6ff" />
+  <text x="225" y="436" fill="#58a6ff" font-size="14" text-anchor="middle">kafka</text>
+  <text x="225" y="456" fill="#6e7681" font-size="11" text-anchor="middle">broker</text>
+
+  <rect x="360" y="405" width="230" height="70" rx="8" fill="#0d1117" stroke="#8b949e" />
+  <text x="475" y="436" fill="#8b949e" font-size="14" text-anchor="middle">zookeeper</text>
+  <text x="475" y="456" fill="#6e7681" font-size="11" text-anchor="middle">coordination</text>
+
+  <rect x="610" y="405" width="230" height="70" rx="8" fill="#0d1117" stroke="#f0883e" />
+  <text x="725" y="436" fill="#f0883e" font-size="14" text-anchor="middle">spark</text>
+  <text x="725" y="456" fill="#6e7681" font-size="11" text-anchor="middle">streaming engine</text>
+
+  <rect x="860" y="405" width="230" height="70" rx="8" fill="#0d1117" stroke="#bc8cff" />
+  <text x="975" y="436" fill="#bc8cff" font-size="14" text-anchor="middle">postgresql</text>
+  <text x="975" y="456" fill="#6e7681" font-size="11" text-anchor="middle">fact store</text>
+
+  <text x="600" y="502" fill="#6e7681" font-size="12" text-anchor="middle">persistent volumes · fault-tolerant checkpointing · service networking</text>
+
+  <!-- Divider -->
+  <line x1="50" y1="548" x2="1150" y2="548" stroke="#21262d" stroke-width="1" />
+
+  <!-- Tech badges -->
+  <text x="600" y="585" fill="#8b949e" font-size="14" text-anchor="middle">
+    <tspan fill="#58a6ff">●</tspan> Python &#160;&#160;
+    <tspan fill="#39d3bb">●</tspan> Apache Kafka &#160;&#160;
+    <tspan fill="#f0883e">●</tspan> Apache Spark &#160;&#160;
+    <tspan fill="#bc8cff">●</tspan> PostgreSQL &#160;&#160;
+    <tspan fill="#3fb950">●</tspan> Power BI DirectQuery
+  </text>
+
+  <!-- Divider -->
+  <line x1="50" y1="618" x2="1150" y2="618" stroke="#21262d" stroke-width="1" />
+
+  <text x="600" y="655" fill="#6e7681" font-size="13" letter-spacing="1" text-anchor="middle">M.S. CAPSTONE 2025 · REPLICATING PRODUCTION-GRADE LOGISTICS MONITORING</text>
+  <text x="600" y="686" fill="#58a6ff" font-size="15" text-anchor="middle">github.com/bachanagoninagesh/Data_Pipeline</text>
+</svg>
