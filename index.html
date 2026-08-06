@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nagesh Bachanagoni | Data Analyst Portfolio</title>
-  <meta name="description" content="Portfolio of Nagesh Bachanagoni, a Data Analyst and BI Developer specializing in Power BI, SQL Server, ETL workflows, data quality, analytics reporting, and data engineering with Kafka and Spark." />
+  <title>Nagesh Bachanagoni | Data Analyst, Database Engineer & BI Developer</title>
+  <meta name="description" content="Portfolio of Nagesh Bachanagoni, a Data Analyst, Database Engineer, and BI Developer specializing in T-SQL, SSIS/ETL pipelines, Power BI, SQL Server, data governance, and real-time data engineering with Kafka and Spark." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -266,6 +266,40 @@
       font-size: .92rem;
     }
 
+    .experience-list {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .exp-item { padding: 1.6rem; }
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: .5rem;
+      margin-bottom: .25rem;
+    }
+    .exp-header h3 { margin: 0; font-size: 1.15rem; }
+    .exp-date {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+    .exp-company {
+      margin: 0 0 .9rem;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .exp-list {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+      display: grid;
+      gap: .45rem;
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -428,6 +462,7 @@
       <nav class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -440,13 +475,13 @@
       <div class="container hero-grid">
         <div class="card hero-copy reveal">
           <div class="eyebrow">Portfolio</div>
-          <h1>Hi, I’m <span>Nagesh Bachanagoni</span><br />Data Analyst & BI Developer</h1>
+          <h1>Hi, I’m <span>Nagesh Bachanagoni</span><br />Data Analyst, Database Engineer & BI Developer</h1>
           <p>
-            Data Analyst and BI Developer with 3+ years of experience turning complex datasets into clear, actionable insights
-            for government, e-commerce, and enterprise organizations. Skilled in building enterprise-grade Power BI dashboards,
-            automating workflows with Power Automate and Power Apps, and writing performance-tuned T-SQL and SQL Server queries
-            — with measurable impact including a 20% increase in annual sales and a 30% improvement in operational efficiency.
-            Also brings hands-on data engineering experience with Kafka, Spark Structured Streaming, PostgreSQL, and Docker.
+            Data Analyst, Database Engineer, and BI Developer with 4+ years of hands-on experience across data engineering,
+            business intelligence, and AI-driven automation — from SSIS/ETL pipelines and T-SQL performance tuning to
+            enterprise Power BI reporting and real-time Kafka/Spark streaming architectures. Track record of measurable
+            impact, including a 20% increase in annual sales, a 30% improvement in operational efficiency, and a 60–70%
+            cut in manual reporting effort.
           </p>
 
           <div class="hero-actions">
@@ -456,7 +491,7 @@
 
           <div class="stats">
             <div class="stat">
-              <strong>3+</strong>
+              <strong>4+</strong>
               <span>Years Experience</span>
             </div>
             <div class="stat">
@@ -476,7 +511,7 @@
           </div>
           <div class="profile-meta">
             <h2>Nagesh Bachanagoni</h2>
-            <p>Data Analyst & BI Developer · Montgomery, Alabama</p>
+            <p>Data Analyst, Database Engineer & BI Developer · Montgomery, Alabama</p>
             <div class="social-links">
               <a class="btn btn-secondary" href="https://www.linkedin.com/in/nagesh-bachanagoni-b84346153/" target="_blank" rel="noreferrer">LinkedIn</a>
               <a class="btn btn-secondary" href="https://github.com/bachanagoninagesh" target="_blank" rel="noreferrer">GitHub</a>
@@ -492,19 +527,19 @@
         <h2 class="section-title reveal">Analytics, BI, and data quality work with measurable business impact.</h2>
         <p class="section-copy reveal">
           I hold an M.S. in Computer Science from Auburn University at Montgomery (GPA 3.5) and I'm targeting
-          Data Analyst, BI Analyst, and Data Quality Analyst roles. My experience spans enterprise dashboard design,
-          ETL/ELT pipeline development, SQL performance tuning, and hands-on data engineering with streaming systems
-          like Kafka and Spark.
+          Database Engineer, Data Analyst, and BI Developer roles. My experience spans SSIS/ETL pipeline engineering,
+          T-SQL performance tuning, enterprise Power BI dashboard design, and hands-on data engineering with streaming
+          systems like Kafka and Spark.
         </p>
 
         <div class="about-grid">
           <div class="card panel reveal">
             <h3>What I do</h3>
             <p>
-              I build reporting and data solutions that connect business data to decisions. My work includes developing Power BI
-              dashboards, writing advanced T-SQL queries and stored procedures, creating ETL/ELT processes, improving data quality
-              through validation, anomaly detection, and root-cause analysis, and building streaming data pipelines with Kafka
-              and Spark Structured Streaming.
+              I build data platforms and reporting solutions that connect business data to decisions. My work includes engineering
+              SSIS/ETL pipelines, writing advanced T-SQL queries, stored procedures, and indexing strategies, developing Power BI
+              dashboards, improving data quality through validation, anomaly detection, and governance, and building streaming
+              data pipelines with Kafka and Spark Structured Streaming.
             </p>
           </div>
           <div class="card panel reveal">
@@ -514,6 +549,8 @@
               <span class="tag">DAX</span>
               <span class="tag">T-SQL</span>
               <span class="tag">SQL Server</span>
+              <span class="tag">SSIS</span>
+              <span class="tag">Star Schema</span>
               <span class="tag">Power Automate</span>
               <span class="tag">Power Apps</span>
               <span class="tag">Azure SQL</span>
@@ -529,6 +566,70 @@
               <span class="tag">Dataverse</span>
               <span class="tag">SharePoint</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="eyebrow">Experience</div>
+        <h2 class="section-title reveal">Where I've built dashboards, pipelines, and data platforms</h2>
+        <p class="section-copy reveal">
+          4+ years across BI development, database/ETL engineering, and data analytics — from state government reporting
+          to enterprise retail pipelines.
+        </p>
+
+        <div class="experience-list">
+          <div class="card exp-item reveal">
+            <div class="exp-header">
+              <h3>Power BI Developer (Contract)</h3>
+              <span class="exp-date">May 2026 – Aug 2026</span>
+            </div>
+            <p class="exp-company">Alabama Commission on Higher Education · via GDH Government Services · Alabama, United States</p>
+            <ul class="exp-list">
+              <li>Built the Student Horizon Report in Power BI, helping students and parents compare colleges and degree programs using wage outcomes, college data, and program inventory.</li>
+              <li>Built a Zendesk Support Dashboard with row-level security for manager and agent views, tracking ticket assignments, resolution volume, and top-performing agents.</li>
+              <li>Added a one-click "email agent" feature streamlining manager-agent communication; supported SharePoint, Power Automate, and Power Apps workflows.</li>
+            </ul>
+          </div>
+
+          <div class="card exp-item reveal">
+            <div class="exp-header">
+              <h3>Data Analytics & BI Intern</h3>
+              <span class="exp-date">Jan 2026 – May 2026</span>
+            </div>
+            <p class="exp-company">A&Z Closet LLC · Alabama, United States</p>
+            <ul class="exp-list">
+              <li>Collected, cleaned, and analyzed Shopify, sales, and operational data to deliver KPI insights for leadership; enforced data quality and governance standards.</li>
+              <li>Built Shopify REST API and webhook integrations for real-time reporting; built and maintained automated ETL pipelines across business units.</li>
+            </ul>
+          </div>
+
+          <div class="card exp-item reveal">
+            <div class="exp-header">
+              <h3>Data Analyst</h3>
+              <span class="exp-date">Dec 2021 – Dec 2023</span>
+            </div>
+            <p class="exp-company">UST Global · Kerala, India</p>
+            <ul class="exp-list">
+              <li>Built Power BI dashboards integrating SQL Server, Excel, and SharePoint, boosting workshop efficiency by 30% and cutting vehicle downtime by 25%.</li>
+              <li>Led the Sales Analysis Report as Team Lead, driving a 20% increase in annual sales through DAX-based forecasting and trend analysis.</li>
+              <li>Designed a Power Apps Customer Master Management System with a Dataverse backend and Power Automate multi-stage approval workflows.</li>
+            </ul>
+          </div>
+
+          <div class="card exp-item reveal">
+            <div class="exp-header">
+              <h3>ETL Developer (SSIS) & BI Analyst</h3>
+              <span class="exp-date">Mar 2020 – Dec 2021</span>
+            </div>
+            <p class="exp-company">Retail IT Solutions · Telangana, India</p>
+            <ul class="exp-list">
+              <li>Automated a multi-store retail ETL pipeline in SSIS with a config-driven Foreach Loop design, cutting daily data consolidation effort by 60–70%.</li>
+              <li>Replaced manual next-day reporting with automated nightly refreshes, giving store managers same-morning Power BI visibility into sales and inventory.</li>
+              <li>Modeled data into a star schema to optimize dashboard performance and scale the pipeline to new stores without a redesign.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -632,9 +733,10 @@
             </div>
             <div class="project-body">
               <p>
-                Architected a streaming pipeline — Kafka producers → Spark Structured Streaming → PostgreSQL fact tables →
-                Power BI DirectQuery dashboards — replicating production-grade logistics monitoring. Containerized the full stack
-                with Docker Compose, replicating a production-grade distributed architecture with fault-tolerant checkpointing.
+                Architected an end-to-end distributed streaming pipeline — Kafka producers → Spark Structured Streaming →
+                PostgreSQL fact tables optimized for analytics → Power BI DirectQuery live dashboards — replicating
+                production-grade logistics monitoring. Containerized the full stack (Kafka, Zookeeper, Spark, PostgreSQL)
+                with Docker Compose and persistent volumes, solving real networking and dependency challenges.
               </p>
               <div class="tag-list">
                 <span class="tag">Kafka</span>
@@ -659,9 +761,11 @@
             </div>
             <div class="project-body">
               <p>
-                Built an AI job search platform aggregating listings from 15 job board APIs, using GPT to score matches,
-                tailor resumes, and generate cover letters. Designed a multi-user architecture deployed on Render,
-                delivering ready-to-apply PDF resume and cover letter packages via email daily.
+                Built a full-stack AI job-search automation platform aggregating listings from 15 job board APIs via parallel
+                ThreadPoolExecutor fetching, cutting collection time by ~80% vs. sequential requests. GPT scores job-resume
+                compatibility, tailors resumes with ATS keywords, and generates cover letters across 24 parallel threads.
+                Deployed on Render with Gunicorn and the Resend API for daily PDF delivery, with per-user isolation and
+                deduplication to prevent redundant API calls.
               </p>
               <div class="tag-list">
                 <span class="tag">Python</span>
@@ -686,9 +790,10 @@
             </div>
             <div class="project-body">
               <p>
-                Built a stock analysis platform aggregating live prices, fundamentals, news, and sentiment data, merged into a
-                Buy/Sell/Hold signal via 29 analysis modules. Built an ensemble forecasting engine blending 8 AI/statistical
-                models, delivered through an 18-tab dashboard with backtesting and portfolio optimization.
+                Built an AI-driven stock analysis agent pulling live prices, financials, insider activity, options data, news,
+                and sentiment from ~10 sources, evaluated across 29 signal categories into Buy/Sell/Hold verdicts with confidence
+                scores. An ensemble of 8 forecasting models, dynamically weighted by recent accuracy, drives an 18-tab dashboard
+                with market-regime detection, event-risk flagging, portfolio optimization, and backtesting.
               </p>
               <div class="tag-list">
                 <span class="tag">Python</span>
@@ -708,10 +813,10 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="eyebrow">Contact</div>
-        <h2 class="section-title reveal">Open to BI, analytics, and data quality opportunities.</h2>
+        <h2 class="section-title reveal">Open to database engineering, BI, and analytics opportunities.</h2>
         <p class="section-copy reveal">
-          I am actively targeting Data Analyst, BI Analyst, and Data Quality Analyst roles where I can contribute through enterprise reporting,
-          ETL development, and high-quality data solutions.
+          I am actively targeting Database Engineer, Data Analyst, and BI Developer roles where I can contribute through
+          SSIS/ETL pipeline engineering, enterprise reporting, and high-quality data solutions.
         </p>
 
         <div class="contact-grid">
